@@ -1,52 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>IFF Invoice Processing Tools - Dashboard</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       min-height: 100vh;
       padding: 40px 20px;
     }
-    
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    
+
+    .container { max-width: 1200px; margin: 0 auto; }
+
     .header {
       text-align: center;
       color: white;
       margin-bottom: 50px;
     }
-    
+
     .header h1 {
       font-size: 42px;
       margin-bottom: 10px;
       text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
     }
-    
-    .header p {
-      font-size: 18px;
-      opacity: 0.9;
-    }
-    
+
+    .header p { font-size: 18px; opacity: 0.9; }
+
     .tools-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 30px;
       margin-bottom: 40px;
     }
-    
+
     .tool-card {
       background: white;
       border-radius: 12px;
@@ -58,43 +48,39 @@
       color: inherit;
       display: block;
     }
-    
+
     .tool-card:hover {
       transform: translateY(-5px);
       box-shadow: 0 15px 40px rgba(0,0,0,0.3);
     }
-    
-    .tool-icon {
-      font-size: 48px;
-      margin-bottom: 15px;
-    }
-    
+
+    .tool-icon { font-size: 48px; margin-bottom: 15px; }
+
     .tool-title {
       font-size: 24px;
       font-weight: 600;
       margin-bottom: 10px;
       color: #333;
     }
-    
+
     .tool-description {
       font-size: 14px;
       color: #666;
       line-height: 1.6;
       margin-bottom: 15px;
     }
-    
+
     .tool-features {
       list-style: none;
       font-size: 13px;
       color: #888;
     }
-    
+
     .tool-features li {
-      padding: 5px 0;
-      padding-left: 20px;
+      padding: 5px 0 5px 20px;
       position: relative;
     }
-    
+
     .tool-features li:before {
       content: "✓";
       position: absolute;
@@ -102,7 +88,7 @@
       color: #667eea;
       font-weight: bold;
     }
-    
+
     .tool-status {
       display: inline-block;
       padding: 4px 10px;
@@ -112,12 +98,12 @@
       text-transform: uppercase;
       margin-top: 10px;
     }
-    
+
     .status-active {
       background: #d4edda;
       color: #155724;
     }
-    
+
     .footer {
       text-align: center;
       color: white;
@@ -125,7 +111,7 @@
       font-size: 14px;
       opacity: 0.8;
     }
-    
+
     .info-section {
       background: rgba(255,255,255,0.95);
       border-radius: 12px;
@@ -133,27 +119,22 @@
       margin-bottom: 40px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.2);
     }
-    
+
     .info-section h2 {
       color: #333;
       margin-bottom: 15px;
       font-size: 22px;
     }
-    
+
     .info-section p {
       color: #666;
       line-height: 1.6;
       margin-bottom: 10px;
     }
-    
+
     @media (max-width: 768px) {
-      .header h1 {
-        font-size: 32px;
-      }
-      
-      .tools-grid {
-        grid-template-columns: 1fr;
-      }
+      .header h1 { font-size: 32px; }
+      .tools-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -163,15 +144,16 @@
       <h1>📋 IFF Invoice Processing Tools</h1>
       <p>Select a tool to process your invoices</p>
     </div>
-    
+
     <div class="info-section">
       <h2>Welcome to the Invoice Processing Dashboard</h2>
       <p>This centralized hub provides access to all IFF invoice processing tools. Each tool is specialized for specific vendor formats and requirements.</p>
       <p><strong>Getting Started:</strong> Click on any tool card below to launch the corresponding invoice parser.</p>
     </div>
-    
+
     <div class="tools-grid">
-      <!-- Grass Invoice Tool -->
+
+      <!-- Grass -->
       <a href="https://iffinc-ga.github.io/grass_tool/" class="tool-card" target="_blank">
         <div class="tool-icon">🌾</div>
         <div class="tool-title">Grass Invoice Parser</div>
@@ -186,8 +168,8 @@
         </ul>
         <span class="tool-status status-active">Active</span>
       </a>
-      
-      <!-- Eisenmann Invoice Tool -->
+
+      <!-- Eisenmann -->
       <a href="https://iffinc-ga.github.io/eisenmann_parser/" class="tool-card" target="_blank">
         <div class="tool-icon">🔧</div>
         <div class="tool-title">Eisenmann Invoice Parser</div>
@@ -202,8 +184,8 @@
         </ul>
         <span class="tool-status status-active">Active</span>
       </a>
-      
-      <!-- Manki Invoice Tool -->
+
+      <!-- Manki -->
       <a href="https://iffinc-ga.github.io/all_in_one_manki/" class="tool-card" target="_blank">
         <div class="tool-icon">📄</div>
         <div class="tool-title">Manki Invoice Parser</div>
@@ -218,13 +200,30 @@
         </ul>
         <span class="tool-status status-active">Active</span>
       </a>
+
+      <!-- Vieler (NEW) -->
+      <a href="https://iffinc-ga.github.io/vieler_tool/" class="tool-card" target="_blank">
+        <div class="tool-icon">📦</div>
+        <div class="tool-title">Vieler Invoice Parser</div>
+        <div class="tool-description">
+          Specialized parser for Vieler invoices with detailed line-item extraction and editable UI.
+        </div>
+        <ul class="tool-features">
+          <li>Multi-invoice PDF support</li>
+          <li>Editable line items</li>
+          <li>Excel export to template</li>
+          <li>Database-backed part matching</li>
+        </ul>
+        <span class="tool-status status-active">Active</span>
+      </a>
+
     </div>
-    
+
     <div class="info-section">
       <h2>🔒 Data Security & Privacy</h2>
       <p>All invoice processing happens entirely in your browser. No data is uploaded to any server. Database files are loaded from GitHub repositories for reference only.</p>
     </div>
-    
+
     <div class="footer">
       <p>IFF Invoice Processing Tools | International Flavors & Fragrances</p>
       <p>© 2025 - Automated Business Solutions</p>
